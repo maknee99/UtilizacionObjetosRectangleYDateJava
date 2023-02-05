@@ -1,0 +1,24 @@
+package mariaruizgonzalez.parte2practicaud3;
+import java.awt.Rectangle;
+import java.util.Date;
+public class RectanguloYFechas {
+    public static void imprimirRectangulo(Rectangle rect, char c) { //este primer metodo tiene un objeto (un rectangulo)
+        for (int a = 0; a < rect.getHeight(); a++) {
+            for (int b = 0; b < rect.getWidth(); b++) {
+                if (a == 0 || a == rect.getHeight() - 1 || b == 0 || b == rect.getWidth() - 1) {
+                    System.out.print(c);
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static int diasEntreFechas(Date fecha1, Date fecha2){ //este segundo metodo toma dos objetos (Date) y devuelve los dias entre ambas fechas
+        long milisegundos1 = fecha1.getTime();
+        long milisegundos2 = fecha2.getTime();
+        long diferenciaMilisegundos = milisegundos2-milisegundos1;
+        int dias = (int)(diferenciaMilisegundos / (1000*60*60*24));
+        return dias;
+    }
+}
