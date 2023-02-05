@@ -1,0 +1,19 @@
+package mariaruizgonzalez.parte2practicaud3;
+import java.awt.Rectangle;
+import java.util.Date;
+public class ObjetosRectanguloYFechas {
+    public static void main(String[] args) {        
+        Rectangle rectangulo = new Rectangle(5, 3);//creacion del objeto rectangulo
+        System.out.println("Procede a la impresion del rectangulo:");
+        RectanguloYFechas.imprimirRectangulo(rectangulo, '*');//impresion del rectagulo
+        System.out.println("\n");
+        System.out.println("-------------------------------------------------------------------");
+        System.out.println("\n");
+        System.out.println("Procede a la impresion de los dias transcurridos entre dos fechas: ");        
+        Date fecha1 = new Date(1995, 12, 6);//creacion de objetos fecha
+        Date fecha2 = new Date(1999, 3, 3);
+        int dias = RectanguloYFechas.diasEntreFechas(fecha1, fecha2);
+        System.out.println("Han pasado " + dias + " dias entre las dos fechas");//impresion de los dias que han pasado
+    }
+    
+}
